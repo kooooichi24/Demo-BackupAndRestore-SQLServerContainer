@@ -1,0 +1,15 @@
+---
+version: '2.2'
+services: 
+  db:
+    image: mcr.microsoft.com/mssql/server:2017-CU21-ubuntu-16.04
+    environment: 
+      SA_PASSWORD: "yourStrong(!)Password"
+      ACCEPT_EULA: "Y"
+      MSSQL_AGENT_ENABLED: "true"
+    ports:
+      - "1431:1433"
+    container_name: mssql2
+    hostname: mssql2
+    volumes:
+      - ./mssql:/var/opt/mssql
