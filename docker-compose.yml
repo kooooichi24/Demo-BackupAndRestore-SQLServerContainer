@@ -11,5 +11,5 @@ services:
       - "1431:1433"
     container_name: mssql2
     hostname: mssql2
-    volumes:
-      - ./mssql:/var/opt/mssql
+    # volumes:
+      # - ./mssql:/var/opt/mssql
